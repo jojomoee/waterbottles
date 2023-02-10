@@ -1,0 +1,24 @@
+//@import './_constants';
+@use 'constants';
+
+body {
+  background-color: constants.$base-black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app {
+  border: solid 1px constants.$base-white;
+  padding: 50px;
+  display: flex;
+}
+h1 {
+  color: constants.$base-white;
+}
