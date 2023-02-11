@@ -3,10 +3,11 @@ let mongoose = require('mongoose');
 let router = express.Router();
 let bottleModel = require('./waterbottleschema');
 
-let uri = `mongodb+srv://jojom:12345@cluster0.obzgbew.mongodb.net/?retryWrites=true&w=majority`;
+let uri = `mongodb+srv://jojom:<password>@cluster0.obzgbew.mongodb.net/?retryWrites=true&w=majority`;
 
 const db = uri;
 mongoose.Promise = global.Promise;
+mongoose.set('strictQuery', false);
 
 mongoose.connect(
   db,
