@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('bodyParser');
+const bodyParser = require('body-parser');
 const api = require('./api');
 
 const port = 3000;
@@ -10,7 +10,5 @@ app.listen(port, function () {
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(bodyParser.json());
-
-app.use('/api', api);
+app.use('./api', api);
