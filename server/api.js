@@ -23,4 +23,23 @@ mongoose.connect(
   }
 );
 
+router.get('/save', function (req, res) {
+  let newWaterbottle = new newWaterbottleModel({
+    Id: 2,
+    Brand: 'Roemerquelle',
+    Size: 1,
+    Sprudel: 'Still',
+    Price: 2.99,
+    Origin: 'Gute Frage',
+  });
+
+  newWaterbottle.save(function (err, data) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send('Data inserted');
+    }
+  });
+});
+
 module.exports = router;
